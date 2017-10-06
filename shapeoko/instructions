@@ -1,0 +1,46 @@
+== install ==
+
+
+== use ==
+
+* from freecad export to step 
+* in heekscad 
+** right click on tools
+*** New End Mill
+*** fill in the details of the end mill you are using (screenshot)
+** file => import => select your step file 
+** right-click the face you want to mill 
+*** face => scetch from face
+** chose the inside holes first, and delete the outside edges (otherwise move)
+*** unders "scetch1" remove the lines that you dont want in the first opperation (esp the outside contours) 
+** again right-click the face you want to mill
+*** face => scetch from face
+*** under scetch 2 remove the inside lines
+** machining => add new milling opperation => profile operation  .. for settings see shapeoko feeds& speeds website (ZZZZZ link ) 
+*** make sure "scetch 1 is selected (the one that has the holes) 
+*** tool on side = inside ,make sure the correct tool is selected ... the rest should be OK (but check them) 
+** again machining => add new milling opperation => profile operation  .. for settings see shapeoko feeds& speeds website (ZZZZZ link )
+*** make sure "scetch 2 is selected (the one that has the outline 
+*** tool on side = outside ,make sure the correct tool is selected ... the rest should be OK (but check them)
+** file => save as  (save your heekds file) 
+** machining => post process (this should create a .ngc file containing the Gcode. You will find this in the same folder as where you stored your heeks file)
+** open the ngc file in a text editor and read it .. all gcode related to toolchanges should be removed 
+* open camotics (we use this to simulate the machine so we can verify  the gcode and edit where needed)
+** open => object => your ngc file 
+*** run the simulation and eddit your Gcode as needed  (please note the origin point (3 arrows on the 3 axxis)
+*** when your gcode is running as desired you can close CAMotics 
+* connect your machine to the shapeoko usb cable
+** make sure your user has rights on the /dev/ttyACM0
+** open universal Gcode sender 
+*** port = /dev/ttyACM0   baud = 9600
+*** click open 
+*** in machine controlls you can move the mill to its desired 0 point (the origin on the camotics simulation) 
+*** when you have reached the desired 0 point click "reset 0" (you can test this by moving the mill and clicking "return to zero"
+*** file mode => browse => select your gcode file 
+*** press send 
+**** best practices is to set the 0 point a cm or 2 above the material and  "air milling" before actually milling your material, that way you make sure everything is working OK 
+
+
+
+
+
