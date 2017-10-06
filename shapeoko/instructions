@@ -1,12 +1,23 @@
 == install ==
+sudo add-apt-repository ppa:neomilium/cam
+sudo apt-get update
+sudo apt-get install heekscad libv8-3.14.5
+
+sudo apt-get install gdebi
+download  http://camotics.org/download.html qnd install the deb
+
+
+get the universal Gcode sender from 
+https://winder.github.io/ugs_website/download/
+
+
 
 
 == use ==
 
 * from freecad export to step 
 * in heekscad 
-** right click on tools
-*** New End Mill
+** right click on tools => New End Mill
 *** fill in the details of the end mill you are using (screenshot)
 ** file => import => select your step file 
 ** right-click the face you want to mill 
@@ -16,7 +27,7 @@
 ** again right-click the face you want to mill
 *** face => scetch from face
 *** under scetch 2 remove the inside lines
-** machining => add new milling opperation => profile operation  .. for settings see shapeoko feeds& speeds website (ZZZZZ link ) 
+** machining => add new milling opperation => profile operation  .. for settings see shapeoko feeds& speeds website (https://www.shapeoko.com/wiki/index.php/Materials)
 *** make sure "scetch 1 is selected (the one that has the holes) 
 *** tool on side = inside ,make sure the correct tool is selected ... the rest should be OK (but check them) 
 ** again machining => add new milling opperation => profile operation  .. for settings see shapeoko feeds& speeds website (ZZZZZ link )
