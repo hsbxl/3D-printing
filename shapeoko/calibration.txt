@@ -1,7 +1,7 @@
 >> $$
 $0=40.000 (x, step/mm)
 $1=40.000 (y, step/mm)
-$2=188.976 (z, step/mm)
+$2=350 (z, step/mm)
 $3=30 (step pulse, usec)
 $4=500.000 (default feed, mm/min)
 $5=500.000 (default seek, mm/min)
