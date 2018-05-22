@@ -1,4 +1,4 @@
->> $$
+$$
 $0=40.000 (x, step/mm)
 $1=40.000 (y, step/mm)
 $2=350 (z, step/mm)
@@ -22,5 +22,3 @@ $19=25.000 (homing feed, mm/min)
 $20=250.000 (homing seek, mm/min)
 $21=100 (homing debounce, msec)
 $22=1.000 (homing pull-off, mm)
-ok
-
